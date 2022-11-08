@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>212-ARCADE</title>
+    <meta name="description" content="A website for a dnd5e character sheet." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='screen.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/@dice-roller/rpg-dice-roller@VERSION/lib/umd/bundle.min.js"></script>
+    <script src="https://unpkg.com/mathjs@9.3.2/lib/browser/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/random-js@2.1.0/dist/random-js.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@dice-roller/rpg-dice-roller@VERSION/lib/umd/bundle.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Character Sheet</h1>
+        </header>
+        
+        <div id="info">
+            <h2>Character Information</h2>
+            <table class="CInfo">
+                <tr>
+                    <th>Name</th>
+                    <th>Race</th>
+                    <th>Class/Level</th>
+                    <th>Background</th>
+                </tr>
+                <tr>
+                    <td>Circe</td>
+                    <td>High Elf</td>
+                    <td>Light Domain Cleic/5</td>
+                    <td>Acoylte</td>
+                </tr>
+            </table>
+        </div>
+            
+        <div id="abilityScores">
+            <h2>Ability Scores</h2>
+            <table>
+                <tr>
+                    <th>STR</th>
+                    <th>DEX</th>
+                    <th>CON</th>
+                    <th>INT</th>
+                    <th>WIS</th>
+                    <th>CHA</th>
+                </tr>
+                <tr>
+                    <td>15(+2)</td>
+                    <td>08(-1)</td>
+                    <td>16(+3)</td>
+                    <td>10(+0)</td>
+                    <td>20(+5)</td>
+                    <td>12(+1)</td>
+                </tr>
+            </table>
+        </div>
+        <div id="HitPoints">
+            <h2>Hit Points, AC and Speed</h2>
+            <table>
+                <tr>
+                    <th>Hit Points:</th>
+                    <th>Armor Class:</th>
+                    <th>Movment Speed:</th>
+                    <th>Spell Save DC/Spell Attack Bonus:</th>
+                </tr>
+                <tr>
+                    <td><form><input class="hp" type="number" min="0" max="41" value="41"></form>/41</td>
+                    <td>17</td>
+                    <td>30</td>
+                    <td>16/ +8</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div id="spells">
+            <h2>Spells</h2>
+            <table >
+                <tr>
+                    <th>Spell Name</th>
+                    <th>Range</th>
+                    <th>Spell Type</th>
+                    <th>Amount of Dice</th>
+                </tr>
+                <tr>
+                    <td>Cure Wounds</td>
+                    <td>Touch</td>
+                    <td>Healing</td>
+                    <td>1d8 Healing</td>
+                </tr>
+                <tr>
+                    <td>Fireball</td>
+                    <td>150ft in a 20ft radius</td>
+                    <td>Dexterity Save</td>
+                    <td>8d6 Fire Damage</td>
+                </tr>
+                <tr>
+                    <td>Guiding Bolt</td>
+                    <td>120ft</td>
+                    <td>Attack Role</td>
+                    <td>4d6 Radient Damage</td>
+                </tr>
+                <tr>
+                    <td>Hold Person</td>
+                    <td>60ft</td>
+                    <td>Wisdom Save</td>
+                    <td>Paralyzed</td>
+                </tr>
+            </table>
+        </div>
+        <div id="dice">
+            <script>
+              // create a new instance of the DiceRoller
+              var diceRoller = new rpgDiceRoller.DiceRoller();
+            </script>
+        </div>
+    </body>
+</html>

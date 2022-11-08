@@ -1,0 +1,38 @@
+html {
+    background: #e6e9e9;
+    background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    background-color: red;
+}
+h2{
+    text-align: center;
+}
+table{
+    width: 80%;
+    margin: auto;
+}
+.CInfo{
+    width: 100%;
+}
+table, th, td{
+    border: 1px solid; 
+}
+#info{
+    width: 50%;
+    margin-bottom: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+#abilityScores, #spells{
+    width: 50%;
+    float: left;
+}
+#spells{
+    margin-top: 20px;
+    
+}
+#HitPoints{
+    width: 50%;
+    float: right;
+}
+ 
