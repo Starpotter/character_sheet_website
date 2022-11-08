@@ -8,10 +8,10 @@
     <meta name="description" content="A website for a dnd5e character sheet." />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{ url_for('static', filename='screen.css') }}" />
-    <script src="https://cdn.jsdelivr.net/npm/@dice-roller/rpg-dice-roller@VERSION/lib/umd/bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@dice-roller/rpg-dice-roller@5.2.1/lib/umd/bundle.min.js"></script>
     <script src="https://unpkg.com/mathjs@9.3.2/lib/browser/math.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/random-js@2.1.0/dist/random-js.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@dice-roller/rpg-dice-roller@VERSION/lib/umd/bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@dice-roller/rpg-dice-roller@5.2.1/lib/umd/bundle.min.js"></script>
     </head>
     <body>
         <header>
@@ -114,6 +114,10 @@
             <script>
               // create a new instance of the DiceRoller
               var diceRoller = new rpgDiceRoller.DiceRoller();
+                
+            import { DiceRoll } from '@dice-roller/rpg-dice-roller';
+
+                const roll = new DiceRoll('4d6');
             </script>
         </div>
     </body>
