@@ -1,7 +1,18 @@
 html {
     background: #e6e9e9;
-    background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    background-image: url("background.jpg");
     background-color: red;
+}
+
+header{
+    width: 50%;
+    margin-bottom: 10px;
+    margin: auto;
+    text-align: center;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
 }
 h2{
     text-align: center;
@@ -21,18 +32,45 @@ table, th, td{
     margin-bottom: 10px;
     margin: auto;
     text-align: center;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
 }
 
-#abilityScores, #spells{
-    width: 50%;
+#abilityScores{
+    width: 49%;
     float: left;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    
 }
 #spells{
+    width: 49%;
+    float: left;
     margin-top: 20px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
     
 }
 #HitPoints{
-    width: 50%;
+    width: 49%;
     float: right;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+#diceTable{
+    width: 49%;
+    float: right;
+    border-radius: 25px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
 }
  

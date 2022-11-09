@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='screen.css') }}" />
     </head>
     <body>
-        <header>
-            <h1>Character Sheet</h1>
-        </header>
-        
+       <header>
+            <h1>D&D5e Character Sheet</h1>
+        </header> 
+
         <div id="info">
             <h2>Character Information</h2>
             <table class="CInfo">
@@ -31,7 +31,7 @@
                 </tr>
             </table>
         </div>
-            
+        
         <div id="abilityScores">
             <h2>Ability Scores</h2>
             <table>
@@ -53,6 +53,7 @@
                 </tr>
             </table>
         </div>
+        
         <div id="HitPoints">
             <h2>Hit Points, AC and Speed</h2>
             <table>
@@ -105,13 +106,19 @@
                     <td>Paralyzed</td>
                 </tr>
             </table>
+        </div> 
+        
+        <div id="diceTable">
+            <h2>Dice Box</h2>
+            <img src="{{ url_for('static', filename='d8.jpg')}}" alt="a d8">
+            <img src="{{ url_for('static', filename='d6.jpg')}}" alt="a d6">
+            <img src="{{ url_for('static', filename='d20.jpg')}}" alt="a d20">
+            <p id="dice"></p>
         </div>
-        <div id="dice">
-            
-        </div>
+        
         <script>
             function attackRoll() {
-                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 20+1)
+                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 20+9)
             }   
             function cureWounds() {
                 document.getElementById("dice").innerHTML=Math.floor(Math.random() * 8+1);
