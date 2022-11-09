@@ -8,10 +8,6 @@
     <meta name="description" content="A website for a dnd5e character sheet." />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{ url_for('static', filename='screen.css') }}" />
-    <script src="https://cdn.jsdelivr.net/npm/@dice-roller/rpg-dice-roller@5.2.1/lib/umd/bundle.min.js"></script>
-    <script src="https://unpkg.com/mathjs@9.3.2/lib/browser/math.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/random-js@2.1.0/dist/random-js.umd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@dice-roller/rpg-dice-roller@5.2.1/lib/umd/bundle.min.js"></script>
     </head>
     <body>
         <header>
@@ -88,19 +84,19 @@
                     <td>Cure Wounds</td>
                     <td>Touch</td>
                     <td>Healing</td>
-                    <td>1d8 Healing</td>
+                    <td><button id="CW" onclick="cureWounds()">1d8 Healing</button></td>
                 </tr>
                 <tr>
                     <td>Fireball</td>
                     <td>150ft in a 20ft radius</td>
                     <td>Dexterity Save</td>
-                    <td>8d6 Fire Damage</td>
+                    <td><button id="FB" onclick="fireball()">8d6 Fire Damage</button></td>
                 </tr>
                 <tr>
                     <td>Guiding Bolt</td>
                     <td>120ft</td>
-                    <td>Attack Role</td>
-                    <td>4d6 Radient Damage</td>
+                    <td><button id="AR" onclick="attackRoll()">Attack Role</button></td>
+                    <td><button id="GB" onclick="guidingBolt()">4d6 Radient Damage</button></td>
                 </tr>
                 <tr>
                     <td>Hold Person</td>
@@ -111,14 +107,21 @@
             </table>
         </div>
         <div id="dice">
-            <script>
-              // create a new instance of the DiceRoller
-              var diceRoller = new rpgDiceRoller.DiceRoller();
-                
-            import { DiceRoll } from '@dice-roller/rpg-dice-roller';
-
-                const roll = new DiceRoll('4d6');
-            </script>
+            
         </div>
+        <script>
+            function attackRoll() {
+                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 20+1)
+            }   
+            function cureWounds() {
+                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 8+1);
+            }
+            function fireball() {
+                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 6+1);
+            }
+            function guidingBolt() {
+                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 10+1);
+            }
+        </script>
     </body>
 </html>
