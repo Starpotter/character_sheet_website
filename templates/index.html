@@ -8,6 +8,9 @@
     <meta name="description" content="A website for a dnd5e character sheet." />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{{ url_for('static', filename='screen.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Slabo+27px&display=swap" rel="stylesheet">
     </head>
     <body>
        <header>
@@ -124,10 +127,10 @@
                 document.getElementById("dice").innerHTML=Math.floor(Math.random() * 8+1);
             }
             function fireball() {
-                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 6+1);
+                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 48+9);
             }
             function guidingBolt() {
-                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 10+1);
+                document.getElementById("dice").innerHTML=Math.floor(Math.random() * 24+5);
             }
         </script>
     </body>
